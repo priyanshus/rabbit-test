@@ -1,3 +1,3 @@
-# E2E Protractor Example Setup
+A demo project setup which will use test pyramid to test the app.
 
-@IN PROGRESS
+WIP
