@@ -21,12 +21,16 @@ angular.module('demoApp')
                 $scope.comments = comments;
             });
     })
-    .controller('RabbitCtr', function ($scope, $http, PostService) {
+    .controller('RabbitCtr',['$scope', '$location','PostService', function ($scope, $location, PostService) {
 
       $scope.checkLogin = function() {
-        var email = $scope.email;
+        var username = $scope.username;
         var password = $scope.password;
-        $scope.loginStatus = PostService.validateLogin();
-        console.log($scope.loginStatus);
+        var loginStatus = PostService.validateLogin(username,password);
+        if(loginStatus == true) {
+          console.log('Im here');
+          $location.url() = '/rabbits-home';
+          console.log('Im done');
+        }
       };
-    });
+    }]);

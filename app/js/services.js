@@ -17,7 +17,9 @@ angular.module('demoApp')
 
         this.validateLogin = function(username,password) {
           if(username == password) {
-            return "token1234";
+            return true;
+          }else {
+            return false;
           }
         }
     });
