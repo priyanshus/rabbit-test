@@ -7,7 +7,7 @@ exports.config = {
     // Boolean. If true, Protractor will connect directly to the browser Drivers
     // at the locations specified by chromeDriver and firefoxPath. Only Chrome
     // and Firefox are supported for direct connect.
-    directConnect: true,
+    directConnect: 'true',
 
     // Use existing selenium local/remote
     // seleniumAddress:  http://localhost:4444/wd/hub
@@ -15,7 +15,14 @@ exports.config = {
     // with --suite=login only the patterns matched by the specified suites will
     // run.
     // @todo
-    specs: ['specs/aui-login.js'],
+    specs: ['tests/*.js'],
+
+    // Capabilities to be passed to the webdriver instance.
+    capabilities: {
+        'browserName': 'firefox'
+    },
+
+    baseUrl: 'http://localhost:9010',
 
     // The timeout in milliseconds for each script run on the browser. This should
     // be longer than the maximum time your application needs to stabilize between
@@ -25,13 +32,15 @@ exports.config = {
     jasmineNodeOpts: {
         defaultTimeoutInterval: 500000
     },
+    framework: 'mocha',
 
-    multiCapabilities: [{
-      'browserName': 'chrome'
-    }, {
-      'browserName': 'firefox'
-    }],
+    mochaOpts: {
+      ui: 'bdd',
+      reporter: 'list',
+      timeout: 'false'
+    }
 
+    /*
     onPrepare: function() {
       // Add a screenshot reporter and store screenshots to `result/screnshots`:
       jasmine.getEnv().addReporter(new HtmlReporter({
@@ -47,5 +56,5 @@ exports.config = {
             return path.join(dateString, capabilities.caps_.browserName, descriptions.join('-'));
          }
       }));
-   }
+   }*/
 };

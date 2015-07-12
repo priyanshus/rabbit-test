@@ -1,9 +1,10 @@
 {
-  "name": "e2eAui",
-  "version": "0.0.0",
-  "description": "E2e tests for AUI",
-  "author": "",
-  "license": "BSD-2-Clause",
+  "name": "rabbit-test",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "grunt run",
+    "e2e": "./node_modules/.bin/protractor tests/e2e/conf.js"
+  },
   "devDependencies": {
     "express": "latest",
     "chromedriver": "~2.15.1",
@@ -12,6 +13,7 @@
     "grunt-express-server": "0.5.1",
     "load-grunt-tasks": "~3.2.0",
     "protractor": "~2.1.0",
+    "mocha": "latest",
     "chai": "~2.3.0",
     "chai-as-promised": "~5.1.0",
     "chai-webdriver": "~1.1.1",
