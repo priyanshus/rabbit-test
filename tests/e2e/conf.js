@@ -35,8 +35,7 @@ exports.config = {
     framework: 'mocha',
 
     mochaOpts: {
-      ui: 'bdd',
-      reporter: 'list',
+      reporter: 'spec',
       timeout: 'false'
     }
 

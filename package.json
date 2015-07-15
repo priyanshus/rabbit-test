@@ -2,16 +2,14 @@
   "name": "rabbit-test",
   "version": "0.0.1",
   "scripts": {
+    "app": "http-server -a localhost -p 4444 -c-1",
     "start": "grunt run",
-    "e2e": "./node_modules/.bin/protractor tests/e2e/conf.js"
+    "e2e": "./node_modules/.bin/protractor tests/e2e/conf.js",
+    "services": "./node_modules/.bin/mocha tests/services/*.js"
   },
   "devDependencies": {
     "express": "latest",
     "chromedriver": "~2.15.1",
-    "grunt": "~0.4.5",
-    "grunt-protractor-runner": "~2.0.0",
-    "grunt-express-server": "0.5.1",
-    "load-grunt-tasks": "~3.2.0",
     "protractor": "~2.1.0",
     "mocha": "latest",
     "chai": "~2.3.0",
@@ -19,9 +17,8 @@
     "chai-webdriver": "~1.1.1",
     "optimist": "~0.6.1",
     "protractor-html-screenshot-reporter": "0.0.19",
-    "protractor-http-mock": "~0.1.13"
-  },
-  "dependencies": {
-    "grunt-devserver": "~0.6.0"
+    "protractor-http-mock": "~0.1.13",
+    "supertest": "^1.0.1",
+    "http-server": "^0.6.1"
   }
 }

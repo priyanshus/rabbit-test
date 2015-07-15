@@ -1,11 +1,11 @@
 <div class="row marketing">
   <div class="col-md-12">
-    <h4><strong><span ng-bind="post.title | uppercase"></span></strong></h4>
-    <p ng-bind="post.body"></p>
+    <h4><strong><span id='posttitle' ng-bind="post.title | uppercase"></span></strong></h4>
+    <p id='postbody' ng-bind="post.body"></p>
   </div>
 </div>
 <div class="panel panel-default" ng-show="post.id">
-  <div class="panel-heading">Comments</div>
+  <div id='comments' class="panel-heading">Comments</div>
   <div class="panel-body" ng-repeat="comment in comments" ng-show="comments.length">
       <div class="row">
           <div class="col-md-12">
