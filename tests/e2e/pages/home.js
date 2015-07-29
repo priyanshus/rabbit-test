@@ -6,7 +6,7 @@ function homePage() {
   this.rabbitLinkLocator = '#rabbit';
 
   this.go = function() {
-    browser.get('/');
+    browser.get('/app');
   };
 
   this.goToAbout = function() {

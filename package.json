@@ -5,7 +5,8 @@
     "app": "http-server -a localhost -p 4444 -c-1",
     "start": "grunt run",
     "e2e": "./node_modules/.bin/protractor tests/e2e/conf.js",
-    "services": "./node_modules/.bin/mocha tests/services/*.js"
+    "services": "./node_modules/.bin/mocha tests/services/*.js",
+    "unit": "./node_modules/.bin/karma start tests/components/conf.js"
   },
   "devDependencies": {
     "express": "latest",
@@ -19,6 +20,9 @@
     "protractor-html-screenshot-reporter": "0.0.19",
     "protractor-http-mock": "~0.1.13",
     "supertest": "^1.0.1",
-    "http-server": "^0.6.1"
+    "http-server": "^0.6.1",
+    "karma": "latest",
+    "karma-firefox-launcher": "latest",
+    "karma-mocha": "latest"
   }
 }

@@ -3,10 +3,6 @@ function postPage() {
   this.postTitleLocator = '#posttitle';
   this.postBodyLocator = '#postbody';
 
-  this.go = function() {
-    browser.get('/');
-  };
-
   this.getCountOfComments = function() {
     var allComments = element.all(by.repeater("comment in comments"));
     return allComments.count();

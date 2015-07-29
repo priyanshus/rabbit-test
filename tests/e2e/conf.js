@@ -22,7 +22,7 @@ exports.config = {
         'browserName': 'firefox'
     },
 
-    baseUrl: 'http://localhost:9010',
+    baseUrl: 'http://localhost:4444',
 
     // The timeout in milliseconds for each script run on the browser. This should
     // be longer than the maximum time your application needs to stabilize between
